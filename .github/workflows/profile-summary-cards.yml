@@ -18,3 +18,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SUMMARY_CARDS_SECRETS }}
         with:
           USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 8 
