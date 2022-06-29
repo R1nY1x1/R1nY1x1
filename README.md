@@ -1,13 +1,13 @@
-# Hi, I’m @R1nY1x1
+# Hi, I’m Rin-Yixi
 
 This is R1nY1x1's Github.
 
-Feel free contact to me!
+Feel free contact to me in any language!
 
 
 ## Hajimemashite from 🇯🇵
 
-I'm master's student in mechanic system.
+I'm master's student in mechanic system in Japan.
 
 My reserch field is DigitalImageProcessing, DeepLerning, and CharacterRecognition.
 
@@ -19,11 +19,13 @@ My reserch field is DigitalImageProcessing, DeepLerning, and CharacterRecognitio
 - C, Go, Python, and VimScript
 
 
-## TODO List
+## Main Project
 
-- [x] thesaurus by Go
-- [x] code handler like POST-IT in vim
-- [ ] lexer and parser of Italian Laguage
-- [ ] Caluculate Intelligence Simulator by minimum CLI tools
+thesaurus by Go
 
-and several CLI tools.
+<a href="https://github.com/R1nY1x1/Saurus"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/R1nY1x1/Saurus.png" width="460px"></a>
+
+
+code handler like POST-IT in vim
+
+<a href="https://github.com/R1nY1x1/vim-peek"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/R1nY1x1/vim-peek.png" width="460px"></a>
