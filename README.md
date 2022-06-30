@@ -1,6 +1,8 @@
-# Hi, I’m Rin-Yixi
+# Hi, I’m Rin Yixi
 
 This is R1nY1x1's Github.
+
+If you wanna know the **non-engineering** part, you can access my [twitter](https://twitter.com/Y1x1R1n) or [blog](http://r1ny1x1.jp/).
 
 Feel free contact to me in any language!
 
@@ -33,5 +35,4 @@ code handler like POST-IT in vim
 
 ## Stats
 
-[![](https://raw.githubusercontent.com/R1nY1x1/R1nY1x1/main/profile-summary-card-output/github/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
-[![](https://raw.githubusercontent.com/R1nY1x1/R1nY1x1/main/profile-summary-card-output/github/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/R1nY1x1/R1nY1x1/main/profile-summary-card-output/github/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+[![](https://raw.githubusercontent.com/R1nY1x1/R1nY1x1/main/profile-summary-card-output/github/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/R1nY1x1/R1nY1x1/main/profile-summary-card-output/github/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
