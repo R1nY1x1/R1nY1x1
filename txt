@@ -1,0 +1,118 @@
+結論から言います。
+はい。ただし「すべて同じ見え方ではない」。
+原因によって 見るログの場所・粒度・確実性が違います。
+ここを理解していないと「ログを見たが分からない」状態になります。
+
+以下、**Electron / Windows GUI アプリが起動しない代表的原因ごとに
+「ログで見えるか」「どこを見れば断定できるか」**を整理します。
+
+⸻
+
+原因別：ログでの可視性マップ
+
+1. セキュリティ・ポリシー系（高確度でログに出る）
+
+原因	ログに出るか	見る場所
+未署名 exe	◎	CodeIntegrity / SmartScreen
+AppLocker 制限	◎	AppLocker/EXE and DLL
+WDAC	◎	CodeIntegrity
+Defender / EDR	◎	Windows Defender
+SmartScreen	◎	SmartScreen
+
+👉 今回の件はこのカテゴリ
+👉 断定可能（ログ＝一次証拠）
+
+⸻
+
+2. OS / 実行基盤系（ログは出るが読解力が必要）
+
+原因	ログ	見る場所
+DLL 不足	○	Application
+VC++ Runtime 不足	○	Application
+API 互換性	△	Application / System
+Windows ビルド差	△	System
+
+典型ログ
+	•	.dll was not found
+	•	Side-by-side configuration is incorrect
+	•	Faulting module name
+
+👉 イベントは出るが、原因解釈は必要
+
+⸻
+
+3. GPU / ドライバ系（ログは出ないことが多い）
+
+原因	ログ	補足
+GPU 初期化失敗	△	何も出ないことがある
+ハードウェアアクセラレーション	△	System に警告のみ
+古い OEM ドライバ	△	無音死が多い
+
+👉
+	•	タスクマネージャーで一瞬表示
+	•	--disable-gpu で回避できる
+
+⸻
+
+4. Electron / Node 内部エラー（ログは出る）
+
+原因	ログ	見る場所
+JS 例外	◎	Application
+require 失敗	◎	Application
+native module 崩れ	◎	Application
+
+👉 アプリが実行開始している証拠がある
+
+⸻
+
+5. 配布・権限・パス問題（半々）
+
+原因	ログ	備考
+書き込み不可	○	Application
+Temp / AppData 不可	△	無音死あり
+Program Files	△	管理者実行で差
+
+
+⸻
+
+「ログに出ない」ケースは何を意味するか
+
+重要です。
+	•	CodeIntegrity / SmartScreen にログあり
+→ 実行前ブロック（署名・ポリシー）
+	•	Application ログあり
+→ exe は起動している（アプリ側問題）
+	•	どこにもログなし
+→
+	•	GPU
+	•	EDR のサイレント kill
+	•	OS レベルの初期化失敗
+
+この三択です。
+
+⸻
+
+実務での切り分け順（再掲・確定版）
+	1.	CodeIntegrity / SmartScreen / AppLocker
+	2.	Windows Defender
+	3.	Application
+	4.	System
+	5.	disableHardwareAcceleration 試験
+
+⸻
+
+厳しめの指摘（鏡）
+	•	「ログを見たが何もない」は
+見方が間違っているか、見る場所が違う
+	•	ログを網羅せずに
+「Electron の不具合」と結論づけるのは
+技術的に未熟
+
+⸻
+
+次の一手（選択）
+	•	原因別 イベントID一覧チートシート
+	•	実際のログを貼った場合の 即断定レビュー
+	•	「ログが何も出ない」場合の 強制切り分け手順
+
+どれをやりますか。
